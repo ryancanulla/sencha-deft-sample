@@ -1,17 +1,15 @@
 Ext.define('SampleWebApp.Application', {
     name: 'SampleWebApp',
 
+    requires: [ 'SampleWebApp.Viewport' ],
+
     extend: 'Ext.app.Application',
 
-    views: [
-        // TODO: add views here
-    ],
+    launch: function() {
+        Deft.Injector.configure({
+            version: 1.00
+        });
 
-    controllers: [
-        // TODO: add controllers here
-    ],
-
-    stores: [
-        // TODO: add stores here
-    ]
+        Ext.create('SampleWebApp.Viewport');
+    }
 });

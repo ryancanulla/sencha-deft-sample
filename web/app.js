@@ -4,10 +4,17 @@
     Sencha Cmd when upgrading.
 */
 
+Ext.Loader.setPath({
+    'Deft': '../packages/deft/src/js'
+});
+
+Ext.syncRequire([
+    'Deft.mixin.Injectable',
+    'Deft.mixin.Controllable'
+]);
+
 Ext.application({
     name: 'SampleWebApp',
-
     extend: 'SampleWebApp.Application',
-    
-    autoCreateViewport: true
+    autoCreateViewport: false
 });

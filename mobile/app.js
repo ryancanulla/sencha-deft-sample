@@ -10,11 +10,21 @@
     will need to resolve manually.
 */
 
+Ext.Loader.setPath({
+    'Deft': '../packages/deft/src/js'
+});
+
+Ext.syncRequire([
+    'Deft.mixin.Injectable',
+    'Deft.mixin.Controllable'
+]);
+
 Ext.application({
     name: 'SampleWebApp',
 
     requires: [
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+        'SampleWebApp.login.LoginMobile'
     ],
 
     views: [
@@ -43,8 +53,12 @@ Ext.application({
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
 
+        Deft.Injector.configure({
+            version: 1.00
+        });
+
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('SampleWebApp.view.Main'));
+        Ext.Viewport.add(Ext.create('SampleWebApp.login.LoginMobile'));
     },
 
     onUpdated: function() {
