@@ -5,7 +5,8 @@
 */
 
 Ext.Loader.setPath({
-    'Deft': '../packages/deft/src/js'
+    'Deft': '../packages/deft/src/js',
+    'SampleCommonApp': '../common'
 });
 
 Ext.syncRequire([

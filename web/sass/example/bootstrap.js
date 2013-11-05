@@ -892,9 +892,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "ExtThemeNeptune.toolbar.Paging": [],
   "ExtThemeNeptune.toolbar.Toolbar": [],
   "SampleWebApp.Application": [],
-  "SampleWebApp.controller.Main": [],
-  "SampleWebApp.view.Main": [],
-  "SampleWebApp.view.Viewport": []
+  "SampleWebApp.Viewport": [],
+  "SampleWebApp.login.LoginWeb": []
 });
 Ext.ClassManager.addNameAliasMappings({
   "Deft.Component": [],
@@ -1918,11 +1917,10 @@ Ext.ClassManager.addNameAliasMappings({
   "ExtThemeNeptune.toolbar.Paging": [],
   "ExtThemeNeptune.toolbar.Toolbar": [],
   "SampleWebApp.Application": [],
-  "SampleWebApp.controller.Main": [],
-  "SampleWebApp.view.Main": [
-    "widget.app-main"
-  ],
-  "SampleWebApp.view.Viewport": []
+  "SampleWebApp.Viewport": [],
+  "SampleWebApp.login.LoginWeb": [
+    "widget.app-login"
+  ]
 });
 Ext.setVersion("deft", "0.9.0");
 Ext.setVersion("ext-theme-base", "4.2.1");

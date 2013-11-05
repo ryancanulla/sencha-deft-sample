@@ -11,7 +11,8 @@
 */
 
 Ext.Loader.setPath({
-    'Deft': '../packages/deft/src/js'
+    'Deft': '../packages/deft/src/js',
+    'SampleCommonApp': '../common'
 });
 
 Ext.syncRequire([
@@ -24,12 +25,11 @@ Ext.application({
 
     requires: [
         'Ext.MessageBox',
-        'SampleWebApp.login.LoginMobile'
+        'SampleWebApp.login.LoginMobile',
+        'Ext.Ajax'
     ],
 
-    views: [
-        'Main'
-    ],
+    views: [],
 
     icon: {
         '57': 'resources/icons/Icon.png',
@@ -54,11 +54,17 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         Deft.Injector.configure({
-            version: 1.00
+            version: 1.00,
+            localize: {
+                className: 'SampleCommonApp.LocalizeService',
+                eager: true
+            }
         });
 
-        // Initialize the main view
-        Ext.Viewport.add(Ext.create('SampleWebApp.login.LoginMobile'));
+        Deft.Injector.resolve('localize').on('loaded', function() {
+            // Initialize the main view
+            Ext.Viewport.add(Ext.create('SampleWebApp.login.LoginMobile'));
+        }, this);
     },
 
     onUpdated: function() {

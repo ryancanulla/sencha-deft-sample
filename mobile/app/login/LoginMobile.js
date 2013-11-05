@@ -3,8 +3,11 @@ Ext.define('SampleWebApp.login.LoginMobile', {
     xtype: 'app-login',
     requires: [
         'Ext.TitleBar',
-        'Ext.Label'
+        'Ext.Label',
+        'SampleCommonApp.LocalizeService'
     ],
+    inject: [ 'localize'],
+
     config: {
         layout: {
             type: 'vbox', align: 'center', pack: 'center'
@@ -12,32 +15,37 @@ Ext.define('SampleWebApp.login.LoginMobile', {
 
         defaults: {
             margin: 10
-        },
+        }
+    },
 
-        items: [
+    initialize: function() {
+
+        this.setItems([
             {
                 docked: 'top',
                 xtype: 'titlebar',
-                title: 'Welcome'
+                title: this.localize.map('login.title')
             },
             {
                 xtype: 'label',
-                html: 'please login'
+                html: this.localize.map('login.formTitle')
             },
             {
                 xtype: 'textfield',
-                label: 'User'
+                label: this.localize.map('login.username'),
+                labelWidth: '35%'
             },
             {
                 xtype: 'textfield',
-                label: 'Password',
+                label: this.localize.map('login.password'),
                 labelWidth: '35%'
             },
             {
                 xtype: 'button',
-                text: 'Login'
+                text: this.localize.map('login.buttonLabel')
             }
+        ]);
 
-        ]
+        this.callParent();
     }
 });

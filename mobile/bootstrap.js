@@ -687,7 +687,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
-  "SampleWebApp.view.Main": []
+  "SampleWebApp.login.LoginMobile": []
 });
 Ext.ClassManager.addNameAliasMappings({
   "Deft.Component": [],
@@ -1426,8 +1426,8 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
-  "SampleWebApp.view.Main": [
-    "widget.main"
+  "SampleWebApp.login.LoginMobile": [
+    "widget.app-login"
   ]
 });
 Ext.setVersion("deft", "0.9.0");

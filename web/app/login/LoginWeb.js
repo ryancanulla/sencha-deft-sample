@@ -3,9 +3,12 @@ Ext.define("SampleWebApp.login.LoginWeb", {
     alias: 'widget.app-login',
 
     requires: [
+        'SampleCommonApp.LocalizeService',
         'Ext.form.Label',
         'Ext.form.field.Text'
     ],
+
+    inject: ['localize'],
 
     initComponent: function() {
         Ext.applyIf(this, {
@@ -18,23 +21,20 @@ Ext.define("SampleWebApp.login.LoginWeb", {
             items: [
                 {
                     xtype: 'label',
-                    text: 'please login'
+                    text: this.localize.map('login.formTitle')
                 },
                 {
                     xtype: 'textfield',
-                    fieldLabel: 'User',
-                    value: ''
+                    fieldLabel: this.localize.map('login.username')
                 },
                 {
                     xtype: 'textfield',
-                    fieldLabel: 'Password',
-                    value: ''
+                    fieldLabel: this.localize.map('login.password')
                 },
                 {
                     xtype: 'button',
-                    text: 'Login'
+                    text: this.localize.map('login.buttonLabel')
                 }
-
             ]
         });
         return this.callParent(arguments);
