@@ -1,0 +1,9 @@
+{
+    "name": "SampleWebApp",
+
+    "requires": [
+        "deft@0.9.0"
+    ],
+
+    "id": "b8c8e88b-d353-4927-8067-f918cfec9b85"
+}
