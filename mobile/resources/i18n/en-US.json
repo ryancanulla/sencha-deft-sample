@@ -1,0 +1,8 @@
+{
+    // login screen
+    "login.title" : "Welcome",
+    "login.formTitle" : "Please Login",
+    "login.username": "Username",
+    "login.password": "Password",
+    "login.buttonLabel": "Login Now"
+}
