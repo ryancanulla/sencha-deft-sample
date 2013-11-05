@@ -4,9 +4,11 @@ Ext.define('SampleWebApp.login.LoginMobile', {
     requires: [
         'Ext.TitleBar',
         'Ext.Label',
-        'SampleCommonApp.LocalizeService'
+        'SampleCommonApp.service.LocalizeService',
+        'SampleWebApp.login.LoginMobileController'
     ],
     inject: [ 'localize'],
+    controller: 'SampleWebApp.login.LoginMobileController',
 
     config: {
         layout: {
@@ -19,7 +21,6 @@ Ext.define('SampleWebApp.login.LoginMobile', {
     },
 
     initialize: function() {
-
         this.setItems([
             {
                 docked: 'top',
@@ -32,16 +33,19 @@ Ext.define('SampleWebApp.login.LoginMobile', {
             },
             {
                 xtype: 'textfield',
+                itemId: 'userField',
                 label: this.localize.map('login.username'),
                 labelWidth: '35%'
             },
             {
                 xtype: 'textfield',
+                itemId: 'passField',
                 label: this.localize.map('login.password'),
                 labelWidth: '35%'
             },
             {
                 xtype: 'button',
+                itemId: 'loginButton',
                 text: this.localize.map('login.buttonLabel')
             }
         ]);

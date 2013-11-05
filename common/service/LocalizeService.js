@@ -1,4 +1,4 @@
-Ext.define('SampleCommonApp.LocalizeService', {
+Ext.define('SampleCommonApp.service.LocalizeService', {
     mixins: { observable: 'Ext.util.Observable' },
     localizedData: {},
 

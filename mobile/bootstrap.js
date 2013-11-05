@@ -19,6 +19,7 @@ Ext.Loader.addClassPathMappings({
   "Ext.device.sqlite.SQLResultSet": "../touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLResultSetRowList": "../touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLTransaction": "../touch/src/device/sqlite/Sencha.js",
+  "SampleCommonApp": "../common",
   "SampleWebApp": "app"
 });
 Ext.ClassManager.addNameAlternateMappings({
@@ -687,7 +688,11 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
-  "SampleWebApp.login.LoginMobile": []
+  "SampleCommonApp.model.UserModel": [],
+  "SampleCommonApp.service.LocalizeService": [],
+  "SampleCommonApp.service.LoginService": [],
+  "SampleWebApp.login.LoginMobile": [],
+  "SampleWebApp.login.LoginMobileController": []
 });
 Ext.ClassManager.addNameAliasMappings({
   "Deft.Component": [],
@@ -1426,8 +1431,12 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "SampleCommonApp.model.UserModel": [],
+  "SampleCommonApp.service.LocalizeService": [],
+  "SampleCommonApp.service.LoginService": [],
   "SampleWebApp.login.LoginMobile": [
     "widget.app-login"
-  ]
+  ],
+  "SampleWebApp.login.LoginMobileController": []
 });
 Ext.setVersion("deft", "0.9.0");

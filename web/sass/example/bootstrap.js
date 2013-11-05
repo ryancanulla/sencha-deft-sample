@@ -12,6 +12,7 @@ Ext.Loader.addClassPathMappings({
   "Ext.Msg": "../../../ext/src/window/MessageBox.js",
   "Ext.rtl.EventObjectImpl": "../../../ext/src/rtl/EventObject.js",
   "ExtThemeNeptune": "../../../ext/packages/ext-theme-neptune/overrides",
+  "SampleCommonApp": "../../../common",
   "SampleWebApp": "../../app"
 });
 Ext.ClassManager.addNameAlternateMappings({
@@ -891,9 +892,13 @@ Ext.ClassManager.addNameAlternateMappings({
   "ExtThemeNeptune.tab.Tab": [],
   "ExtThemeNeptune.toolbar.Paging": [],
   "ExtThemeNeptune.toolbar.Toolbar": [],
+  "SampleCommonApp.model.UserModel": [],
+  "SampleCommonApp.service.LocalizeService": [],
+  "SampleCommonApp.service.LoginService": [],
   "SampleWebApp.Application": [],
   "SampleWebApp.Viewport": [],
-  "SampleWebApp.login.LoginWeb": []
+  "SampleWebApp.login.LoginWeb": [],
+  "SampleWebApp.login.LoginWebController": []
 });
 Ext.ClassManager.addNameAliasMappings({
   "Deft.Component": [],
@@ -1916,11 +1921,15 @@ Ext.ClassManager.addNameAliasMappings({
   "ExtThemeNeptune.tab.Tab": [],
   "ExtThemeNeptune.toolbar.Paging": [],
   "ExtThemeNeptune.toolbar.Toolbar": [],
+  "SampleCommonApp.model.UserModel": [],
+  "SampleCommonApp.service.LocalizeService": [],
+  "SampleCommonApp.service.LoginService": [],
   "SampleWebApp.Application": [],
   "SampleWebApp.Viewport": [],
   "SampleWebApp.login.LoginWeb": [
     "widget.app-login"
-  ]
+  ],
+  "SampleWebApp.login.LoginWebController": []
 });
 Ext.setVersion("deft", "0.9.0");
 Ext.setVersion("ext-theme-base", "4.2.1");

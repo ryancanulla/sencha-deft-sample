@@ -44,6 +44,11 @@
             "x-bootstrap": true
         },
         {
+            "path": "../common/lib/senchaCompatibility.js",
+            "bundle": true,
+            "update": "delta"
+        },
+        {
             "path": "bootstrap.js",
             "x-bootstrap": true
         },

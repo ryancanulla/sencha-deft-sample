@@ -3,12 +3,15 @@ Ext.define("SampleWebApp.login.LoginWeb", {
     alias: 'widget.app-login',
 
     requires: [
-        'SampleCommonApp.LocalizeService',
+        'SampleCommonApp.service.LocalizeService',
+        'SampleWebApp.login.LoginWebController',
         'Ext.form.Label',
         'Ext.form.field.Text'
     ],
 
     inject: ['localize'],
+
+    controller: 'SampleWebApp.login.LoginWebController',
 
     initComponent: function() {
         Ext.applyIf(this, {
@@ -25,14 +28,17 @@ Ext.define("SampleWebApp.login.LoginWeb", {
                 },
                 {
                     xtype: 'textfield',
+                    itemId: 'userField',
                     fieldLabel: this.localize.map('login.username')
                 },
                 {
                     xtype: 'textfield',
+                    itemId: 'passField',
                     fieldLabel: this.localize.map('login.password')
                 },
                 {
                     xtype: 'button',
+                    itemId: 'loginButton',
                     text: this.localize.map('login.buttonLabel')
                 }
             ]
