@@ -17,13 +17,17 @@ Ext.define('SampleCommonApp.service.LoginService', {
     login: function(user, pass) {
         var deferred = Ext.create('Deft.Deferred');
 
-        if (user === 'fitc' && pass === '2013') {
+        if (this.isValidCredentials(user, pass)) {
             this.userModel.set('name', 'Ryan Canulla');
             deferred.resolve();
         } else {
             deferred.reject("Error loading Companies.");
         }
         return deferred.promise;
+    },
+
+    isValidCredentials: function(user, pass) {
+        return user === 'fitc' && pass === '2013';
     }
 
 });

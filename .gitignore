@@ -3,3 +3,4 @@
 build
 src/mobile/resources/sass/.sass-cache
 test/node/node_modules
+packages
