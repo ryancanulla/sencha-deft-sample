@@ -40,13 +40,8 @@
      */
     "js": [
         {
-            "path": "../touch/sencha-touch.js",
+            "path": "../../touch/sencha-touch.js",
             "x-bootstrap": true
-        },
-        {
-            "path": "../common/lib/senchaCompatibility.js",
-            "bundle": true,
-            "update": "delta"
         },
         {
             "path": "bootstrap.js",
