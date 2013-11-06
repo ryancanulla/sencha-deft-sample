@@ -1,2 +1,0 @@
-sencha-deft-sample
-==================

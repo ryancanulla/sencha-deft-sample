@@ -1,5 +1,5 @@
 .idea
 .DS_Store
 build
-node_modules
 src/mobile/resources/sass/.sass-cache
+test/node/node_modules
