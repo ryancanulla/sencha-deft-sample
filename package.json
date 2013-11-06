@@ -1,0 +1,20 @@
+{
+  "name": "web-unleashed",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "",
+  "private": true,
+  "bugs": {
+    "url": ""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "karma-ie-launcher": "~0.1.1",
+    "karma-jasmine": "0.1.3"
+  }
+}
