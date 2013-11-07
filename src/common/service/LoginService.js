@@ -1,3 +1,8 @@
+/**
+ * Manage the business logic required to authenticate
+ * a user.
+ * @singleton
+ */
 Ext.define('SampleCommonApp.service.LoginService', {
     mixins: { observable: 'Ext.util.Observable' },
     localizedData: {},
@@ -14,6 +19,12 @@ Ext.define('SampleCommonApp.service.LoginService', {
         this.mixins.observable.constructor.call(this, config);
     },
 
+    /**
+     * Handles login authentication.
+     * @param {String/Number} user The users username
+     * @param {String} pass The users password
+     * @return {Promise} the promise for the method call.
+     */
     login: function(user, pass) {
         var deferred = Ext.create('Deft.Deferred');
 

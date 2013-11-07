@@ -1,0 +1,24 @@
+{
+    "--warnings": [
+        "-no_doc:~/Documents/ext-4.2.1.883/src",
+        "-no_doc_member:~/Documents/ext-4.2.1.883/src",
+        "-link:~/Documents/ext-4.2.1.883/src",
+        "-type_name:~/Documents/ext-4.2.1.883/src"
+    ],
+    "--ignore-html": [
+        "locale",
+        "debug"
+    ],
+    "--images": "~/Documents/ext-4.2.1.883/docs/images",
+    "--builtin-classes": false,
+    "--seo": true,
+
+    "--guides": "guides.json",
+    "--output": "html",
+    "--title": "Sample Docs",
+    "--": [
+        "../src/common/model/UserModel.js",
+        "../src/common/service/LoginService.js",
+        "../src/common/service/LocalizeService.js"
+    ]
+}
